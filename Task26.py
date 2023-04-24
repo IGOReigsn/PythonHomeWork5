@@ -2,3 +2,13 @@
 *Пример:*
 A = 3; B = 5 -> 243 (3⁵)
     A = 2; B = 3 -> 8 """
+    
+def mul(a:int,b:int):
+    print(a,b)
+    if b==1: return mul
+    s=s*mul(a,b-1)
+    
+a=int(input("Введите число А: "))
+b=int(input("Введите показатель степени B: "))
+s=mul(a,b)
+print(s)
