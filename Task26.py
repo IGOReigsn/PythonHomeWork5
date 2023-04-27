@@ -2,13 +2,13 @@
 *Пример:*
 A = 3; B = 5 -> 243 (3⁵)
     A = 2; B = 3 -> 8 """
-    
-def mul(a:int,b:int):
-    print(a,b)
-    if b==1: return mul
-    s=s*mul(a,b-1)
-    
+  
+#-------------ФУНКЦИЯ-----------------  
+def exponentiation(a, b):
+    if b == 0: return 1
+    return a*exponentiation(a, b - 1)
+#-------------ОСНОВНАЯ ПРОГРАММА-----------------  
 a=int(input("Введите число А: "))
 b=int(input("Введите показатель степени B: "))
-s=mul(a,b)
-print(s)
+if b<0: print("Показатель степени B должен быть неотрицательным")
+else: print(exponentiation(a, b))
